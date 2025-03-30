@@ -679,6 +679,17 @@
             }
         }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN1BHDLYN8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NN1BHDLYN8', { 'anonymize_ip': true });
+    </script>
+
 </head>
 <body>
     <!-- Header -->
@@ -900,12 +911,15 @@
             <h2 class="section-title">Documents & Contact</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;">
-                    <a href="assets/documents/MTA_CV.pdf" class="publication-link" style="display: inline-flex; align-items: center; padding: 15px 25px; font-size: 1.1rem;">
+                    <a href="assets/documents/MTA_CV.pdf" onclick="gtag('event', 'download', {'event_category': 'Documents', 'event_label': 'CV'});" class="publication-link" style="display: inline-flex; align-items: center; padding: 15px 25px; font-size: 1.1rem;">
                         <i class="fas fa-file-alt" style="margin-right: 10px;"></i> Download CV
                     </a>
-                    <a href="assets/documents/MTA_Resume.pdf" class="publication-link" style="display: inline-flex; align-items: center; padding: 15px 25px; font-size: 1.1rem;">
-                        <i class="fas fa-file" style="margin-right: 10px;"></i> Download Resume
+                    <a href="assets/documents/MTA_Resume.pdf" onclick="gtag('event', 'download', {'event_category': 'Documents', 'event_label': 'Resume'});" class="publication-link" style="display: inline-flex; align-items: center; padding: 15px 25px; font-size: 1.1rem;">
+                        <i class="fas fa-file-alt" style="margin-right: 10px;"></i> Download Resume
                     </a>
+                    <!-- <a href="assets/documents/MTA_Resume.pdf" class="publication-link" style="display: inline-flex; align-items: center; padding: 15px 25px; font-size: 1.1rem;">
+                        <i class="fas fa-file" style="margin-right: 10px;"></i> Download Resume
+                    </a> -->
                     <a href="https://linkedin.com/in/mohammad-taha-asgari" target="_blank" class="publication-link" style="display: inline-flex; align-items: center; padding: 15px 25px; font-size: 1.1rem;">
                         <i class="fab fa-linkedin" style="margin-right: 10px;"></i> LinkedIn
                     </a>
