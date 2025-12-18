@@ -754,7 +754,6 @@
         "https://github.com/daeitaha",
         "https://scholar.google.com/citations?user=N5sC19EAAAAJ"
       ],
-      "email": "mohammataha@ece.ubc.ca"
     }
     </script>
 
@@ -1041,7 +1040,7 @@
                     <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
                         <p style="display: flex; align-items: center; font-size: 1.1rem;">
                             <i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary-color);"></i>
-                            <a href="mailto:mohammataha@ece.ubc.ca">mohammataha@ece.ubc.ca</a>
+                            <span id="email-display"></span>
                         </p>
                         <p style="display: flex; align-items: center; font-size: 1.1rem;">
                             <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary-color);"></i>
@@ -1063,7 +1062,7 @@
                 <a href="https://linkedin.com/in/mohammad-taha-asgari" target="_blank" class="social-link">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="mailto:mohammataha@ece.ubc.ca" class="social-link">
+                <a href="#" id="email-footer" class="social-link">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <!-- <a href="skype:live:taha.asgari9888" class="social-link">
@@ -1075,6 +1074,29 @@
     </footer>
 
     <script>
+        // Email obfuscation - decode on page load
+        (function() {
+            // Encoded email parts to prevent scraping
+            const user = 'mohammataha';
+            const domain = 'ece.ubc.ca';
+            const email = user + '@' + domain;
+
+            // Display email in contact section
+            const emailDisplay = document.getElementById('email-display');
+            if (emailDisplay) {
+                const emailLink = document.createElement('a');
+                emailLink.href = 'mailto:' + email;
+                emailLink.textContent = email;
+                emailDisplay.appendChild(emailLink);
+            }
+
+            // Set email link in footer
+            const emailFooter = document.getElementById('email-footer');
+            if (emailFooter) {
+                emailFooter.href = 'mailto:' + email;
+            }
+        })();
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
