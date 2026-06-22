@@ -796,7 +796,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>I am a PhD candidate in Electrical and Computer Engineering at the University of British Columbia (UBC). My research focuses on <b>machine learning for sequential and structured data</b>, with an emphasis on <b>probabilistic modeling</b> and <b>neural sequence models</b> for communication systems with memory, noise, and nonlinear dynamics.</p>
-                    <p>My earlier work introduced an <b>interpretable low-pass filter model</b> to analyze how probabilistic shaping interacts with nonlinear channels, and led to a <b>sequence selection method</b> that improves robustness to nonlinear interference. More recently, I developed a <b>Bayesian carrier phase recovery algorithm</b> for low-SNR regimes, and I am currently building <b>end-to-end differentiable learning frameworks</b> that learn <b>joint distributions</b> using autoregressive and sequence-to-sequence models.</p>
+                    <p>My earlier work introduced an <b>interpretable low-pass filter model</b> to analyze how probabilistic shaping interacts with nonlinear channels, and led to a <b>sequence selection method</b> that improves robustness to nonlinear interference. More recently, I developed a <b>Bayesian carrier phase recovery algorithm</b> for low-SNR regimes, and built a family of <b>end-to-end neural sequence models</b> — progressing from LSTM-based autoregressive encoders to a <b>Transformer-based sequential architecture</b> — that directly learn <b>joint symbol distributions</b> for nonlinear fiber channels. This work introduced rate-loss-aware training objectives and produced the first neural shaping method to outperform classical and sequence-selection baselines while accounting for all implementation losses.</p>
                     <div class="research-interests">
                         <h3>Research Interests:</h3>
                         <div class="interest-list">
@@ -864,7 +864,7 @@
                     <!-- <p>My research has focused on probabilistic signal shaping methods, particularly probabilistic amplitude shaping for optical fiber communications. I introduced a low pass filter model to explain the complex interplay between probabilistic shaping and fiber nonlinearity. Building on this theoretical work, I developed a novel sequence selection scheme to improve nonlinearity tolerance in probabilistic amplitude shaping for optical fiber communications.</p> -->
                     <!-- <p>More recently, I designed a Bayesian phase search algorithm for carrier phase recovery in the low-SNR regime, addressing specific challenges that arise in probabilistic shaping scenarios. My current work explores end-to-end sequence-based auto encoder approaches for probabilistic shaping, leveraging advances in deep learning for communication systems.</p> -->
                     <p>At UBC’s Data Communications Group, I conduct graduate research on probabilistic modeling and sequence design for communication systems with memory and nonlinear dynamics. I developed an analytical low-pass filter model to characterize how probabilistic shaping interacts with nonlinear channels and used it to guide interpretable system-level design.</p>
-                    <p>I also proposed a sequence selection algorithm that improves robustness to nonlinear interference by exploiting temporal dependencies, and designed a Bayesian carrier phase recovery method that incorporates prior distributions for improved low-SNR performance. My current work explores end-to-end learning approaches using neural sequence models for joint distribution learning in communication systems.</p>
+                    <p>I also proposed a sequence selection algorithm that improves robustness to nonlinear interference by exploiting temporal dependencies, and designed a Bayesian carrier phase recovery method that incorporates prior distributions for improved low-SNR performance. Building on these foundations, I developed a series of neural shaping frameworks — from LSTM-based joint-distribution learning to a Transformer-based sequential architecture with rate-loss-aware training — that achieve state-of-the-art performance on nonlinear fiber channels while remaining compatible with practical PAS/FEC transceivers.</p>
                 </div>
             </div>
             <div class="research-card">
@@ -872,12 +872,12 @@
                     <h3 class="research-title">Research Internship at Nokia Bell Labs</h3>
                     <div class="research-meta">
                         <span>Machine Learning Research Intern</span>
-                        <span>Apr. 2025 - Present</span>
+                        <span>Apr. 2025 - Jul. 2026</span>
                     </div>
                 </div>
                 <div class="research-details">
-                    <p>At Nokia Bell Labs, I focused on machine learning research for sequence modeling and joint distribution learning. I designed and implemented Neural Probabilistic Shaping (NPS), an autoregressive neural framework trained end-to-end using differentiable sampling (e.g., Gumbel-Softmax) and differentiable channel models.</p>
-                    <p>I built a scalable training and evaluation pipeline in Python, ran extensive experiments on multi-dimensional system settings, and benchmarked learned models against classical baselines and heuristic methods. This work emphasized model design, optimization, and empirical validation of neural sequence models for communication systems with memory.</p>
+                    <p>At Nokia Bell Labs, I led ML research on neural sequence modeling for joint distribution learning in optical fiber systems. I designed and implemented Neural Probabilistic Shaping (NPS), an autoregressive LSTM framework trained end-to-end via Gumbel-Softmax sampling, achieving substantial AIR gains over marginal-distribution shaping and sequence selection.</p>
+                    <p>I extended NPS to Neural Probabilistic Amplitude Shaping (NPAS), constraining learning to unsigned symbols for full compatibility with practical PAS/FEC transceivers. I then developed Sequential NPAS (Seq-NPAS), a block-less Transformer-based encoder with a rate-loss-aware training objective — the first neural shaping method to outperform all baselines after accounting for all implementation losses.</p>
                 </div>
             </div>
             <div class="research-card">
